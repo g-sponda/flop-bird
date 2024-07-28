@@ -1,6 +1,6 @@
 Pipe = Object:extend()
 
-local PIPE_GAP_DIV_CALCULATOR = 5
+local PIPE_GAP_DIV_CALCULATOR = 7
 local PIPE_GAP_MOST_TOP = love.graphics.getHeight() / PIPE_GAP_DIV_CALCULATOR
 local PIPE_GAP_MOST_BOTTOM = PIPE_GAP_MOST_TOP * (PIPE_GAP_DIV_CALCULATOR - 2)
 
@@ -10,13 +10,13 @@ function Pipe:new(secondary)
 	local secondary = secondary or false
 	self.width = 40
 
-	self.x = love.graphics.getWidth() -- - self.width
+	self.x = love.graphics.getWidth()
 	if secondary then
 		self:checkSpawnSecondary()
 	end
 
 	self.speed = 200
-	self.gapSize = Bird.height * 7
+	self.gapSize = Bird.height * 5
 
 	self:randomizePipesGapY()
 	self.wasCrossed = false
@@ -39,8 +39,8 @@ function Pipe:randomizePipesGapY()
 	local rndNum = love.math.random(PIPE_GAP_MOST_TOP, PIPE_GAP_MOST_BOTTOM)
 
 	self.top.height = rndNum
-	self.bottom.y = self.top.height + self.gapSize
 
+	self.bottom.y = self.top.height + self.gapSize
 	self.bottom.height = love.graphics.getHeight() - self.bottom.y
 end
 

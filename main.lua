@@ -31,6 +31,7 @@ end
 
 function love.draw()
 	if firstRound then
+		Bird:draw()
 		love.graphics.print(
 			"Press space to start playing.",
 			love.graphics.getWidth() / 7,
