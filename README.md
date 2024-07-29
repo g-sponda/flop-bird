@@ -12,3 +12,7 @@ A window will open, and you should be able to play.
 
 ### More information
 For more information of how to use Love2d framework, you can find at their [wiki page](https://love2d.org/wiki/Main_Page).
+
+
+## Demo
+![flop-bird](https://github.com/user-attachments/assets/30ca36e6-4faf-4395-ae73-dcee8936a17b)
