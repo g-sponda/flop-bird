@@ -42,7 +42,7 @@ function love.draw()
 	elseif loser then
 		Score:updateBestScore()
 		love.graphics.print(
-			"Game Over\nPress R to restart game.",
+			"Game Over\nPress r to restart game.",
 			love.graphics.getWidth() / 5,
 			love.graphics.getHeight() / 5 * 2
 		)
@@ -59,7 +59,7 @@ function love.keypressed(key)
 	if key == "escape" or key == "q" then
 		love.event.quit()
 	elseif key == "r" then
-		love.event.quit("restart")
+		resetGame()
 	elseif key == "p" then
 		pause = not pause
 	elseif firstRound and key == "space" then
@@ -80,4 +80,10 @@ function checkScore()
 	for i, _ in ipairs(pipesSpawns) do
 		Score:shouldScore(crossedPipe(Bird, pipesSpawns[i]) and pipesSpawns[i].wasCrossed and not loser)
 	end
+end
+
+function resetGame()
+	firstRound = true
+	loser = false
+	love:load()
 end
