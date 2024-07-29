@@ -1,6 +1,6 @@
 Pipe = Object:extend()
 
-local PIPE_GAP_DIV_CALCULATOR = 7
+local PIPE_GAP_DIV_CALCULATOR = 6
 local PIPE_GAP_MOST_TOP = love.graphics.getHeight() / PIPE_GAP_DIV_CALCULATOR
 local PIPE_GAP_MOST_BOTTOM = PIPE_GAP_MOST_TOP * (PIPE_GAP_DIV_CALCULATOR - 2)
 

@@ -1,4 +1,4 @@
-require("bird")
+require("objects.bird")
 require("score")
 require("utils")
 
@@ -12,7 +12,7 @@ function love.load()
 	Bird:load()
 
 	Object = require("classic")
-	require("pipe")
+	require("objects.pipe")
 	pipesSpawns = { Pipe(false), Pipe(true) }
 
 	pause = false

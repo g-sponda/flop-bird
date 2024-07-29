@@ -43,7 +43,7 @@ end
 function Bird:up(dt)
 	self.vel = self.vel + self.gravity * dt
 	if love.keyboard.isDown("space") and not self.wasJumpPressed then
-		self.vel = -4
+		self.vel = -5
 		self.wasJumpPressed = true
 	end
 	if self.vel > MAX_VELOCITY then
